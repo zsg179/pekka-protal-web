@@ -88,35 +88,7 @@
 		</div>
 	 </c:forEach>
 </div>
-<div class=item-rank>
-	<div class="rank-title">
-		<h3 class="title-info">人气单品</h3>
-	</div>
-	<div class=rank-body>
-<%-- 	<c:forEach items="${hotRankItem }" var="HRI"> --%>
-		<div class=rank-body-item>
-			<a class="rank-body-item-link">
-				<div class="item-link-img" style="margin-left: -15px;">
-					<div class="lazyimg" style="background: transparent none repeat scroll 0% 0%;" alt="${HRI.title }" title="${HRI.title }">
-						<img class="imgloaded" src="${HRI.image }" alt="${HRI.title }" />
-					</div>
-				</div>
-				<div class="goods-info" style="padding-top: 0px;">
-					<div class="goods-rank-ranking" style="background-color: rgb(221, 69, 69); color: rgb(255, 255, 255); font-size: 14px;">
-						1
-					</div>
-					<div class="goods-rank-name" style="color: rgb(102, 102, 102);">
-						${HRI.title }
-					</div>
-					<div class="goods-rank-price" style="color: rgb(221, 69, 69);">
-						<fmt:formatNumber value="${HRI.price * 0.01}" type="currency" pattern="￥.00"/>
-					</div>
-				</div>
-			</a>
-		</div>
-<%-- 	</c:forEach> --%>
-	</div>
-</div>
+<jsp:include page="_HOT_AD.jsp" />
 </div>
 
 
@@ -145,35 +117,7 @@
 		</div>
 	 </c:forEach>
 </div>
-<div class=item-rank>
-	<div class="rank-title">
-		<h3 class="title-info">人气单品</h3>
-	</div>
-	<div class=rank-body>
-<%-- 	<c:forEach items="${hotRankItem }" var="HRI"> --%>
-		<div class=rank-body-item>
-			<a class="rank-body-item-link">
-				<div class="item-link-img" style="margin-left: -15px;">
-					<div class="lazyimg" style="background: transparent none repeat scroll 0% 0%;" alt="${HRI.title }" title="${HRI.title }">
-						<img class="imgloaded" src="${HRI.image }" alt="${HRI.title }" />
-					</div>
-				</div>
-				<div class="goods-info" style="padding-top: 0px;">
-					<div class="goods-rank-ranking" style="background-color: rgb(221, 69, 69); color: rgb(255, 255, 255); font-size: 14px;">
-						1
-					</div>
-					<div class="goods-rank-name" style="color: rgb(102, 102, 102);">
-						${HRI.title }
-					</div>
-					<div class="goods-rank-price" style="color: rgb(221, 69, 69);">
-						<fmt:formatNumber value="${HRI.price * 0.01}" type="currency" pattern="￥.00"/>
-					</div>
-				</div>
-			</a>
-		</div>
-<%-- 	</c:forEach> --%>
-	</div>
-</div>
+<jsp:include page="_YIZHI_AD.jsp"/>
 </div>
 
 <div class=category-title>
@@ -201,35 +145,7 @@
 		</div>
 	 </c:forEach>
 </div>
-<div class=item-rank>
-	<div class="rank-title">
-		<h3 class="title-info">人气单品</h3>
-	</div>
-	<div class=rank-body>
-<%-- 	<c:forEach items="${hotRankItem }" var="HRI"> --%>
-		<div class=rank-body-item>
-			<a class="rank-body-item-link">
-				<div class="item-link-img" style="margin-left: -15px;">
-					<div class="lazyimg" style="background: transparent none repeat scroll 0% 0%;" alt="${HRI.title }" title="${HRI.title }">
-						<img class="imgloaded" src="${HRI.image }" alt="${HRI.title }" />
-					</div>
-				</div>
-				<div class="goods-info" style="padding-top: 0px;">
-					<div class="goods-rank-ranking" style="background-color: rgb(221, 69, 69); color: rgb(255, 255, 255); font-size: 14px;">
-						1
-					</div>
-					<div class="goods-rank-name" style="color: rgb(102, 102, 102);">
-						${HRI.title }
-					</div>
-					<div class="goods-rank-price" style="color: rgb(221, 69, 69);">
-						<fmt:formatNumber value="${HRI.price * 0.01}" type="currency" pattern="￥.00"/>
-					</div>
-				</div>
-			</a>
-		</div>
-<%-- 	</c:forEach> --%>
-	</div>
-</div>
+<jsp:include page="_YAOKONG_AD.jsp"/>
 </div>
 
 <div class=category-title>
@@ -257,35 +173,7 @@
 		</div>
 	 </c:forEach>
 </div>
-<div class=item-rank>
-	<div class="rank-title">
-		<h3 class="title-info">人气单品</h3>
-	</div>
-	<div class=rank-body>
-<%-- 	<c:forEach items="${hotRankItem }" var="HRI"> --%>
-		<div class=rank-body-item>
-			<a class="rank-body-item-link">
-				<div class="item-link-img" style="margin-left: -15px;">
-					<div class="lazyimg" style="background: transparent none repeat scroll 0% 0%;" alt="${HRI.title }" title="${HRI.title }">
-						<img class="imgloaded" src="${HRI.image }" alt="${HRI.title }" />
-					</div>
-				</div>
-				<div class="goods-info" style="padding-top: 0px;">
-					<div class="goods-rank-ranking" style="background-color: rgb(221, 69, 69); color: rgb(255, 255, 255); font-size: 14px;">
-						1
-					</div>
-					<div class="goods-rank-name" style="color: rgb(102, 102, 102);">
-						${HRI.title }
-					</div>
-					<div class="goods-rank-price" style="color: rgb(221, 69, 69);">
-						<fmt:formatNumber value="${HRI.price * 0.01}" type="currency" pattern="￥.00"/>
-					</div>
-				</div>
-			</a>
-		</div>
-<%-- 	</c:forEach> --%>
-	</div>
-</div>
+<jsp:include page="_JMPC_AD.jsp"/>
 </div>
 
 <div class=category-title>
@@ -318,12 +206,12 @@
 		<h3 class="title-info">人气单品</h3>
 	</div>
 	<div class=rank-body>
-<%-- 	<c:forEach items="${hotRankItem }" var="HRI"> --%>
+	<c:forEach items="${DMMXItemRanking }" var="DMMX">
 		<div class=rank-body-item>
 			<a class="rank-body-item-link">
 				<div class="item-link-img" style="margin-left: -15px;">
-					<div class="lazyimg" style="background: transparent none repeat scroll 0% 0%;" alt="${HRI.title }" title="${HRI.title }">
-						<img class="imgloaded" src="${HRI.image }" alt="${HRI.title }" />
+					<div class="lazyimg" style="background: transparent none repeat scroll 0% 0%;" alt="${DMMX.title }" title="${DMMX.title }">
+						<img class="imgloaded" src="${DMMX.image }" alt="${DMMX.title }" />
 					</div>
 				</div>
 				<div class="goods-info" style="padding-top: 0px;">
@@ -331,15 +219,15 @@
 						1
 					</div>
 					<div class="goods-rank-name" style="color: rgb(102, 102, 102);">
-						${HRI.title }
+						${DMMX.title }
 					</div>
 					<div class="goods-rank-price" style="color: rgb(221, 69, 69);">
-						<fmt:formatNumber value="${HRI.price * 0.01}" type="currency" pattern="￥.00"/>
+						<fmt:formatNumber value="${DMMX.price * 0.01}" type="currency" pattern="￥.00"/>
 					</div>
 				</div>
 			</a>
 		</div>
-<%-- 	</c:forEach> --%>
+	</c:forEach>
 	</div>
 </div>
 </div>
@@ -374,12 +262,12 @@
 		<h3 class="title-info">人气单品</h3>
 	</div>
 	<div class=rank-body>
-<%-- 	<c:forEach items="${hotRankItem }" var="HRI"> --%>
+	<c:forEach items="${JSItemRanking }" var="JS">
 		<div class=rank-body-item>
 			<a class="rank-body-item-link">
 				<div class="item-link-img" style="margin-left: -15px;">
-					<div class="lazyimg" style="background: transparent none repeat scroll 0% 0%;" alt="${HRI.title }" title="${HRI.title }">
-						<img class="imgloaded" src="${HRI.image }" alt="${HRI.title }" />
+					<div class="lazyimg" style="background: transparent none repeat scroll 0% 0%;" alt="${JS.title }" title="${JS.title }">
+						<img class="imgloaded" src="${JS.image }" alt="${JS.title }" />
 					</div>
 				</div>
 				<div class="goods-info" style="padding-top: 0px;">
@@ -387,15 +275,15 @@
 						1
 					</div>
 					<div class="goods-rank-name" style="color: rgb(102, 102, 102);">
-						${HRI.title }
+						${JS.title }
 					</div>
 					<div class="goods-rank-price" style="color: rgb(221, 69, 69);">
-						<fmt:formatNumber value="${HRI.price * 0.01}" type="currency" pattern="￥.00"/>
+						<fmt:formatNumber value="${JS.price * 0.01}" type="currency" pattern="￥.00"/>
 					</div>
 				</div>
 			</a>
 		</div>
-<%-- 	</c:forEach> --%>
+	</c:forEach>
 	</div>
 </div>
 </div>
@@ -430,12 +318,12 @@
 		<h3 class="title-info">人气单品</h3>
 	</div>
 	<div class=rank-body>
-<%-- 	<c:forEach items="${hotRankItem }" var="HRI"> --%>
+	<c:forEach items="${MRItemRanking }" var="MR">
 		<div class=rank-body-item>
 			<a class="rank-body-item-link">
 				<div class="item-link-img" style="margin-left: -15px;">
-					<div class="lazyimg" style="background: transparent none repeat scroll 0% 0%;" alt="${HRI.title }" title="${HRI.title }">
-						<img class="imgloaded" src="${HRI.image }" alt="${HRI.title }" />
+					<div class="lazyimg" style="background: transparent none repeat scroll 0% 0%;" alt="${MR.title }" title="${MR.title }">
+						<img class="imgloaded" src="${MR.image }" alt="${MR.title }" />
 					</div>
 				</div>
 				<div class="goods-info" style="padding-top: 0px;">
@@ -443,15 +331,15 @@
 						1
 					</div>
 					<div class="goods-rank-name" style="color: rgb(102, 102, 102);">
-						${HRI.title }
+						${MR.title }
 					</div>
 					<div class="goods-rank-price" style="color: rgb(221, 69, 69);">
-						<fmt:formatNumber value="${HRI.price * 0.01}" type="currency" pattern="￥.00"/>
+						<fmt:formatNumber value="${MR.price * 0.01}" type="currency" pattern="￥.00"/>
 					</div>
 				</div>
 			</a>
 		</div>
-<%-- 	</c:forEach> --%>
+	</c:forEach>
 	</div>
 </div>
 </div>
@@ -486,12 +374,12 @@
 		<h3 class="title-info">人气单品</h3>
 	</div>
 	<div class=rank-body>
-<%-- 	<c:forEach items="${hotRankItem }" var="HRI"> --%>
+	<c:forEach items="${CYDIYItemRanking }" var="CYDIY">
 		<div class=rank-body-item>
 			<a class="rank-body-item-link">
 				<div class="item-link-img" style="margin-left: -15px;">
-					<div class="lazyimg" style="background: transparent none repeat scroll 0% 0%;" alt="${HRI.title }" title="${HRI.title }">
-						<img class="imgloaded" src="${HRI.image }" alt="${HRI.title }" />
+					<div class="lazyimg" style="background: transparent none repeat scroll 0% 0%;" alt="${CYDIY.title }" title="${CYDIY.title }">
+						<img class="imgloaded" src="${CYDIY.image }" alt="${CYDIY.title }" />
 					</div>
 				</div>
 				<div class="goods-info" style="padding-top: 0px;">
@@ -499,15 +387,15 @@
 						1
 					</div>
 					<div class="goods-rank-name" style="color: rgb(102, 102, 102);">
-						${HRI.title }
+						${CYDIY.title }
 					</div>
 					<div class="goods-rank-price" style="color: rgb(221, 69, 69);">
-						<fmt:formatNumber value="${HRI.price * 0.01}" type="currency" pattern="￥.00"/>
+						<fmt:formatNumber value="${CYDIY.price * 0.01}" type="currency" pattern="￥.00"/>
 					</div>
 				</div>
 			</a>
 		</div>
-<%-- 	</c:forEach> --%>
+	</c:forEach>
 	</div>
 </div>
 </div>
@@ -542,12 +430,12 @@
 		<h3 class="title-info">人气单品</h3>
 	</div>
 	<div class=rank-body>
-<%-- 	<c:forEach items="${hotRankItem }" var="HRI"> --%>
+	<c:forEach items="${YQItemRanking }" var="YQ">
 		<div class=rank-body-item>
 			<a class="rank-body-item-link">
 				<div class="item-link-img" style="margin-left: -15px;">
-					<div class="lazyimg" style="background: transparent none repeat scroll 0% 0%;" alt="${HRI.title }" title="${HRI.title }">
-						<img class="imgloaded" src="${HRI.image }" alt="${HRI.title }" />
+					<div class="lazyimg" style="background: transparent none repeat scroll 0% 0%;" alt="${YQ.title }" title="${YQ.title }">
+						<img class="imgloaded" src="${YQ.image }" alt="${YQ.title }" />
 					</div>
 				</div>
 				<div class="goods-info" style="padding-top: 0px;">
@@ -555,29 +443,81 @@
 						1
 					</div>
 					<div class="goods-rank-name" style="color: rgb(102, 102, 102);">
-						${HRI.title }
+						${YQ.title }
 					</div>
 					<div class="goods-rank-price" style="color: rgb(221, 69, 69);">
-						<fmt:formatNumber value="${HRI.price * 0.01}" type="currency" pattern="￥.00"/>
+						<fmt:formatNumber value="${YQ.price * 0.01}" type="currency" pattern="￥.00"/>
 					</div>
 				</div>
 			</a>
 		</div>
-<%-- 	</c:forEach> --%>
+	</c:forEach>
 	</div>
 </div>
 </div>
-
-
-
-
 </div>
-
 
 <!-- footer start -->
 <jsp:include page="commons/footer.jsp" />
 <!-- footer end -->
  
 <script type="text/javascript" src="/js/home.js" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		hot_ranking();
+		yizhi_ranking();
+		yaokong_ranking();
+		jmpc_ranking();
+		//setInterval('hot_ranking()', 60000);
+	})
+
+	function hot_ranking() {
+		 $.ajax({
+			url	:"/item/getSalesRanking.action",
+			type:"post",
+			dataType:"json",
+			data:{key:"_HOT_AD"},
+			success:function(data){
+				
+			} 
+		}); 
+		//$.post("/item/getSalesRanking.action",{key:"_HOT_AD"});
+	}
+	function yizhi_ranking() {
+		$.ajax({
+			url	:"/item/getSalesRanking.action",
+			type:"post",
+			dataType:"json",
+			data:{key:"_YIZHI_AD"},
+			success:function(data){
+				
+			} 
+		});
+	}
+	function yaokong_ranking() {
+		$.ajax({
+			url	:"/item/getSalesRanking.action",
+			type:"post",
+			dataType:"json",
+			data:{key:"_YAOKONG_AD"},
+			success:function(data){
+				
+			} 
+		});
+	}
+	
+	function jmpc_ranking() {
+		$.ajax({
+			url	:"/item/getSalesRanking.action",
+			type:"post",
+			dataType:"json",
+			data:{key:"_JMPC_AD"},
+			success:function(data){
+				
+			} 
+		});
+	}
+</script>
+
 </body>
 </html>

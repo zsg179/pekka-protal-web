@@ -21,10 +21,11 @@
 	
 	
 	<!-- 引用dubbo服务 -->
-	<dubbo:application name="taotao-portal-web"/>
-	<dubbo:registry protocol="zookeeper" address="192.168.25.128:2181"/>	
+	<dubbo:application name="pekka-portal-web"/>
+	<dubbo:registry protocol="zookeeper" address="192.168.25.128:2181" file = "protal.properties"/>	
 	<dubbo:reference interface="com.pekka.content.service.ContentService" id="contentService" />	
 	<dubbo:reference interface="com.pekka.service.ItemADService" id="itemADService" />	
+	<dubbo:reference interface="com.pekka.service.ItemService" id="itemService" timeout="300000"/>	
 
 	
 </beans>

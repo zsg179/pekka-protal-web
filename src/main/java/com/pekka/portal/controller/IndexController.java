@@ -3,11 +3,14 @@ package com.pekka.portal.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.pekka.common.pojo.EasyUIDataGridResult;
 import com.pekka.common.util.JsonUtils;
@@ -16,6 +19,7 @@ import com.pekka.pojo.TbContent;
 import com.pekka.pojo.TbItem;
 import com.pekka.portal.pojo.AD1Node;
 import com.pekka.service.ItemADService;
+import com.pekka.service.ItemService;
 
 @Controller
 public class IndexController {
@@ -24,6 +28,8 @@ public class IndexController {
 	private ContentService contentService;
 	@Autowired
 	private ItemADService itemADService;
+	@Autowired
+	private ItemService itemService;
 	@Value("${AD1_CID}")
 	private Long AD1_CID;// 大广告id
 	@Value("${AD1_WIDTH}")
@@ -293,5 +299,52 @@ public class IndexController {
 			tbItem.setImage(img);
 		}
 		model.addAttribute("yqItemList", list);
+	}
+
+	@RequestMapping(value = "/item/getSalesRanking", method = RequestMethod.POST)
+	public String getSalesRanking(String key,Model model) {
+		// 返回销量排名前七位的商品
+		List<TbItem> saelsRanking = itemService.getSaelsRanking(key, 0, 6);
+		switch (key) {
+		case "_HOT_AD":
+			model.addAttribute("hotItemRanking", saelsRanking);
+			//request.getSession().setAttribute("hotItemRanking", saelsRanking);
+			break;
+		case "_YIZHI_AD":
+			model.addAttribute("YZItemRanking", saelsRanking);
+			//request.getSession().setAttribute("YZItemRanking", saelsRanking);
+			break;
+		case "_YAOKONG_AD":
+			model.addAttribute("YKItemRanking", saelsRanking);
+			//request.getSession().setAttribute("YKItemRanking", saelsRanking);
+			break;
+		case "_JMPC_AD":
+			model.addAttribute("JMPCItemRanking", saelsRanking);
+			//request.getSession().setAttribute("JMPCItemRanking", saelsRanking);
+			break;
+		case "_DMMX_AD":
+			model.addAttribute("DMMXItemRanking", saelsRanking);
+			//request.getSession().setAttribute("DMMXItemRanking", saelsRanking);
+			break;
+		case "_JSWJ_AD":
+			model.addAttribute("JSItemRanking", saelsRanking);
+			//request.getSession().setAttribute("JSItemRanking", saelsRanking);
+			break;
+		case "_MRWJ_AD":
+			model.addAttribute("MRItemRanking", saelsRanking);
+			//request.getSession().setAttribute("MRItemRanking", saelsRanking);
+			break;
+		case "_CYDIY_AD":
+			model.addAttribute("CYDIYItemRanking", saelsRanking);
+			//request.getSession().setAttribute("CYDIYItemRanking", saelsRanking);
+			break;
+		case "_YQ_AD":
+			model.addAttribute("YQItemRanking", saelsRanking);
+			//request.getSession().setAttribute("YQItemRanking", saelsRanking);
+			break;
+		default:
+			break;
+		}
+		return key;
 	}
 }
