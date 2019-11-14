@@ -302,45 +302,45 @@ public class IndexController {
 	}
 
 	@RequestMapping(value = "/item/getSalesRanking", method = RequestMethod.POST)
-	public String getSalesRanking(String key,Model model) {
+	public String getSalesRanking(String key, HttpServletRequest request) {
 		// 返回销量排名前七位的商品
 		List<TbItem> saelsRanking = itemService.getSaelsRanking(key, 0, 6);
 		switch (key) {
 		case "_HOT_AD":
-			model.addAttribute("hotItemRanking", saelsRanking);
-			//request.getSession().setAttribute("hotItemRanking", saelsRanking);
+			// model.addAttribute("hotItemRanking", saelsRanking);
+			request.getSession().setAttribute("hotItemRanking", saelsRanking);
 			break;
 		case "_YIZHI_AD":
-			model.addAttribute("YZItemRanking", saelsRanking);
-			//request.getSession().setAttribute("YZItemRanking", saelsRanking);
+			// model.addAttribute("YZItemRanking", saelsRanking);
+			request.getSession().setAttribute("YZItemRanking", saelsRanking);
 			break;
 		case "_YAOKONG_AD":
-			model.addAttribute("YKItemRanking", saelsRanking);
-			//request.getSession().setAttribute("YKItemRanking", saelsRanking);
+			// model.addAttribute("YKItemRanking", saelsRanking);
+			request.getSession().setAttribute("YKItemRanking", saelsRanking);
 			break;
 		case "_JMPC_AD":
-			model.addAttribute("JMPCItemRanking", saelsRanking);
-			//request.getSession().setAttribute("JMPCItemRanking", saelsRanking);
+			// model.addAttribute("JMPCItemRanking", saelsRanking);
+			request.getSession().setAttribute("JMPCItemRanking", saelsRanking);
 			break;
 		case "_DMMX_AD":
-			model.addAttribute("DMMXItemRanking", saelsRanking);
-			//request.getSession().setAttribute("DMMXItemRanking", saelsRanking);
+			// model.addAttribute("DMMXItemRanking", saelsRanking);
+			request.getSession().setAttribute("DMMXItemRanking", saelsRanking);
 			break;
 		case "_JSWJ_AD":
-			model.addAttribute("JSItemRanking", saelsRanking);
-			//request.getSession().setAttribute("JSItemRanking", saelsRanking);
+			// model.addAttribute("JSItemRanking", saelsRanking);
+			request.getSession().setAttribute("JSItemRanking", saelsRanking);
 			break;
 		case "_MRWJ_AD":
-			model.addAttribute("MRItemRanking", saelsRanking);
-			//request.getSession().setAttribute("MRItemRanking", saelsRanking);
+			// model.addAttribute("MRItemRanking", saelsRanking);
+			request.getSession().setAttribute("MRItemRanking", saelsRanking);
 			break;
 		case "_CYDIY_AD":
-			model.addAttribute("CYDIYItemRanking", saelsRanking);
-			//request.getSession().setAttribute("CYDIYItemRanking", saelsRanking);
+			// model.addAttribute("CYDIYItemRanking", saelsRanking);
+			request.getSession().setAttribute("CYDIYItemRanking", saelsRanking);
 			break;
 		case "_YQ_AD":
-			model.addAttribute("YQItemRanking", saelsRanking);
-			//request.getSession().setAttribute("YQItemRanking", saelsRanking);
+			// model.addAttribute("YQItemRanking", saelsRanking);
+			request.getSession().setAttribute("YQItemRanking", saelsRanking);
 			break;
 		default:
 			break;
