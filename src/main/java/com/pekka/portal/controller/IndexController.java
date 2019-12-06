@@ -42,40 +42,22 @@ public class IndexController {
 	private Integer AD1_HEIGHT_B;// 大广告高
 	@Value("${HOT_AD_CID}")
 	private Long HOT_AD_CID;// 当季热卖广告
-	@Value("${HOT_ITEM_ADID}")
-	private Long HOT_ITEM_ADID;// 当季热卖商品
 	@Value("${YIZHI_AD_CID}")
 	private Long YIZHI_AD_CID;// 益智玩具广告
-	@Value("${YIZHI_ITEM_ADID}")
-	private Long YIZHI_ITEM_ADID;// 益智玩具商品
 	@Value("${YAOKONG_AD_CID}")
 	private Long YAOKONG_AD_CID;// 遥控电动广告
-	@Value("${YAOKONG_ITEM_ADID}")
-	private Long YAOKONG_ITEM_ADID;// 遥控电动商品
 	@Value("${JMPC_AD_CID}")
 	private Long JMPC_AD_CID;// 积木拼插广告
-	@Value("${JMPC_ITEM_ADID}")
-	private Long JMPC_ITEM_ADID;// 积木拼插商品
-	@Value("${DMMX_ITEM_ADID}")
-	private Long DMMX_ITEM_ADID;// 动漫模型商品
 	@Value("${DMMX_AD_CID}")
 	private Long DMMX_AD_CID;// 动漫模型广告
-	@Value("${JSWJ_ITEM_ADID}")
-	private Long JSWJ_ITEM_ADID;// 健身玩具商品
 	@Value("${JSWJ_AD_CID}")
 	private Long JSWJ_AD_CID;// 健身玩具广告
 	@Value("${MRWJ_AD_CID}")
 	private Long MRWJ_AD_CID;// 毛绒玩具广告
-	@Value("${MRWJ_ITEM_ADID}")
-	private Long MRWJ_ITEM_ADID;// 毛绒玩具商品
 	@Value("${CYDIY_AD_CID}")
 	private Long CYDIY_AD_CID;// 创意DIY广告
-	@Value("${CYDIY_ITEM_ADID}")
-	private Long CYDIY_ITEM_ADID;// 创意DIY商品
 	@Value("${YQ_AD_CID}")
 	private Long YQ_AD_CID;// 乐器广告
-	@Value("${YQ_ITEM_ADID}")
-	private Long YQ_ITEM_ADID;// 乐器商品
 
 	@RequestMapping("/index")
 	public String index(Model model) {
@@ -130,9 +112,9 @@ public class IndexController {
 		model.addAttribute("hotADURL", list.get(0).getUrl());
 	}
 
-	// 当季热卖商品
+	// 当季热卖商品广告
 	void showHotItem(Model model) {
-		EasyUIDataGridResult result = itemADService.getItemADList(HOT_ITEM_ADID);
+		EasyUIDataGridResult result = itemADService.getItemADHotList();
 		List<TbItem> list = result.getRows();
 		for (TbItem tbItem : list) {
 			String img = tbItem.getImage().split(",")[0];
@@ -150,9 +132,9 @@ public class IndexController {
 		model.addAttribute("yizhiADURL", list.get(0).getUrl());
 	}
 
-	// 益智玩具商品
+	// 益智玩具商品广告
 	void showYizhiItem(Model model) {
-		EasyUIDataGridResult result = itemADService.getItemADList(YIZHI_ITEM_ADID);
+		EasyUIDataGridResult result = itemADService.getItemADList("益智玩具");
 		List<TbItem> list = result.getRows();
 		for (TbItem tbItem : list) {
 			String img = tbItem.getImage().split(",")[0];
@@ -172,7 +154,7 @@ public class IndexController {
 
 	// 遥控电动商品
 	void showYaokongItem(Model model) {
-		EasyUIDataGridResult result = itemADService.getItemADList(YAOKONG_ITEM_ADID);
+		EasyUIDataGridResult result = itemADService.getItemADList("遥控电动");
 		List<TbItem> list = result.getRows();
 		for (TbItem tbItem : list) {
 			String img = tbItem.getImage().split(",")[0];
@@ -192,7 +174,7 @@ public class IndexController {
 
 	// 积木拼插商品
 	void showJMPCItem(Model model) {
-		EasyUIDataGridResult result = itemADService.getItemADList(JMPC_ITEM_ADID);
+		EasyUIDataGridResult result = itemADService.getItemADList("积木拼插");
 		List<TbItem> list = result.getRows();
 		for (TbItem tbItem : list) {
 			String img = tbItem.getImage().split(",")[0];
@@ -212,7 +194,7 @@ public class IndexController {
 
 	// 动漫模型商品
 	void showDMMXItem(Model model) {
-		EasyUIDataGridResult result = itemADService.getItemADList(DMMX_ITEM_ADID);
+		EasyUIDataGridResult result = itemADService.getItemADList("动漫模型");
 		List<TbItem> list = result.getRows();
 		for (TbItem tbItem : list) {
 			String img = tbItem.getImage().split(",")[0];
@@ -232,7 +214,7 @@ public class IndexController {
 
 	// 健身玩具商品
 	void showJSWJItem(Model model) {
-		EasyUIDataGridResult result = itemADService.getItemADList(JSWJ_ITEM_ADID);
+		EasyUIDataGridResult result = itemADService.getItemADList("健身玩具");
 		List<TbItem> list = result.getRows();
 		for (TbItem tbItem : list) {
 			String img = tbItem.getImage().split(",")[0];
@@ -252,7 +234,7 @@ public class IndexController {
 
 	// 毛绒玩具商品
 	void showMRWJItem(Model model) {
-		EasyUIDataGridResult result = itemADService.getItemADList(MRWJ_ITEM_ADID);
+		EasyUIDataGridResult result = itemADService.getItemADList("毛绒玩具");
 		List<TbItem> list = result.getRows();
 		for (TbItem tbItem : list) {
 			String img = tbItem.getImage().split(",")[0];
@@ -272,7 +254,7 @@ public class IndexController {
 
 	// 创意DIY商品
 	void showCYDIYItem(Model model) {
-		EasyUIDataGridResult result = itemADService.getItemADList(CYDIY_ITEM_ADID);
+		EasyUIDataGridResult result = itemADService.getItemADList("创意DIY");
 		List<TbItem> list = result.getRows();
 		for (TbItem tbItem : list) {
 			String img = tbItem.getImage().split(",")[0];
@@ -292,7 +274,7 @@ public class IndexController {
 
 	// 乐器商品
 	void showYQItem(Model model) {
-		EasyUIDataGridResult result = itemADService.getItemADList(YQ_ITEM_ADID);
+		EasyUIDataGridResult result = itemADService.getItemADList("乐器");
 		List<TbItem> list = result.getRows();
 		for (TbItem tbItem : list) {
 			String img = tbItem.getImage().split(",")[0];
