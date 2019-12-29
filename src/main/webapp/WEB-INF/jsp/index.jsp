@@ -8,8 +8,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>皮卡玩具商城(PEKKA.COM)-正品低价、品质保障、配送及时、轻松购物！</title>
-<meta name="description" content="皮卡JD.COM-专业的综合网上购物商城，在线销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品、在线旅游等数万个品牌千万种优质商品。便捷、诚信的服务，为您提供愉悦的网上商城购物体验! ">
-<meta name="Keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,皮卡商城">
+<meta name="description" content="皮卡PEKKA.COM-专业的综合网上购物商城。便捷、诚信的服务，为您提供愉悦的网上商城购物体验! ">
+<meta name="Keywords" content="网上购物,网上商城,皮卡商城">
 <link href="/css/taotao.css" rel="stylesheet"/>
 <script type="text/javascript">
 	window.pageConfig={
