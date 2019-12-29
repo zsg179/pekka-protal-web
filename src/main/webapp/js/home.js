@@ -1,4 +1,4 @@
-function getPriceNum(t, e, i, a, n) {
+/*function getPriceNum(t, e, i, a, n) {
     t = "string" == typeof t ? [t] : t, i = i || $("body"), a = a || "J-p-";
     var s = "";
     if (null !== e && (s = readCookie("ipLoc-djd") ? "&area=" + readCookie("ipLoc-djd").replace(/-/g, "_") : "&area=1"), void 0 !== t) {
@@ -650,3 +650,4 @@ var Floors = {cacheData: null,data: function(t) {
         $(this).attr("src") || $(this).attr("src", t).removeAttr("data-src")
     })
 });
+*/
