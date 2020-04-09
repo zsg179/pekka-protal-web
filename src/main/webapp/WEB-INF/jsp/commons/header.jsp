@@ -139,5 +139,20 @@
 	</div>
 </div>
 <script type="text/javascript">
-(function(){if(pageConfig.navId){var object=document.getElementById("nav-"+pageConfig.navId);if(object)object.className+=" curr";}})();
+//(function(){if(pageConfig.navId){var object=document.getElementById("nav-"+pageConfig.navId);if(object)object.className+=" curr";}})();
+
+/* $(function(){
+	generateItemCat();	
+})
+
+function generateItemCat(){
+		$.ajax({
+			url:"/itemCat/generateItemCat",
+			type:"GET",
+			dataType:"json",
+			success:function(data){
+				
+			}
+		})
+	} */
 </script>

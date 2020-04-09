@@ -336,7 +336,9 @@
 		cydiy_ranking();
 		yq_ranking();
 		//setInterval('hot_ranking()', 60000);
+		
 	})
+	
 
 	function hot_ranking() {
 		 $.ajax({
