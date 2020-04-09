@@ -322,7 +322,7 @@
 <jsp:include page="commons/footer.jsp" />
 <!-- footer end -->
  
-
+<script type="text/javascript" src="/js/home.js" charset="utf-8"></script>
 <script type="text/javascript">
 	$(function(){
 		hot_ranking();
