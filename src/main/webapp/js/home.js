@@ -512,7 +512,8 @@ var Floors = {cacheData: null,data: function(t) {
                 }
             }})
     }), 0 !== $("#showcase").length && setShowcase("#showcase"), 0 !== $("#clothing-plist-2").length && setClothingPlist2("#clothing-plist-2"), setCheckEptArea()
-})(), $(function() {
+})(), 
+/*$(function() {
     function t() {
         var t = $("#floors-list [data-fid]"), e = $("#backpanel-floor"), a = e.find(".bp-item-floor-links");
         $("body").scroller({onScroll: function() {
@@ -577,7 +578,8 @@ var Floors = {cacheData: null,data: function(t) {
         t.after(e), $(".jd-wx-qrcode").Jdropdown({delay: 100}, function() {
         })
     }()
-}), function(t) {
+}),*/ 
+function(t) {
     t.fn.imgScroll = function(e, i) {
         var a = {data: [],template: null,evtType: "click",visible: 1,direction: "x",next: "#next",prev: "#prev",disableClass: "disabled",disableClassPerfix: !1,speed: 300,step: 1,loop: !1,showControl: !1,width: null,height: null,navItems: !1,navItmesWrapClass: "scroll-nav-wrap",navItemActivedClass: "current",status: !1,statusWrapSelector: ".scroll-status-wrap"}, n = t.extend(a, e);
         return this.each(function() {
